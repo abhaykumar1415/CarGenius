@@ -1,0 +1,43 @@
+<div class="inputBlock " ng-class="{'default' : isGray != 'true'}">
+    <label translate="MAKE"></label>
+    <div class="input">
+        <select dir="rtl" name="makesSelect" id="makesSelect" ng-class="{'gray' : isGray == 'true'}" ng-model="modelName.make" ng-change="updateModels(modelName.make.id);" ng-options="make as make.title for make in makes track by make.id" required>
+            <option value="" selected></option>
+        </select>
+        <span class="dotted"></span>
+        <small class="input-error" ng-class="{'active' : formName.makesSelect.$dirty && formName.makesSelect.$invalid}" translate="FIELD_REQUIRED"></small>
+    </div>
+</div>
+
+<div class="inputBlock " ng-class="{'default' : isGray != 'true'}">
+    <label translate="YEAR"></label>
+    <div class="input">
+        <select dir="rtl" name="yearsSelect" id="yearsSelect" ng-class="{'gray' : isGray == 'true'}" ng-model="modelName.year" ng-change="updateMileages(modelName.year.id);" ng-options="year as year.year_number for year in years track by year.id" required>
+            <option value="" selected></option>
+        </select>
+        <span class="dotted"></span>
+        <small class="input-error" ng-class="{'active' : formName.yearsSelect.$dirty && formName.yearsSelect.$invalid}" translate="FIELD_REQUIRED"></small>
+    </div>
+</div>
+
+<div class="inputBlock " ng-class="{'default' : isGray != 'true'}">
+    <label translate="MODEL"></label>
+    <div class="input">
+        <select dir="rtl" name="modelsSelect" id="modelsSelect" ng-class="{'gray' : isGray == 'true'}" ng-model="modelName.model" ng-change="updateYears(modelName.model.id);" ng-options="model as model.title for model in models track by model.id" required>
+            <option value="" selected></option>
+        </select>
+        <span class="dotted"></span>
+        <small class="input-error" ng-class="{'active' : formName.modelsSelect.$dirty && formName.modelsSelect.$invalid}" translate="FIELD_REQUIRED"></small>
+    </div>
+</div>
+
+<div class="inputBlock " ng-class="{'default' : isGray != 'true'}">
+    <label translate="MILEAGE"></label>
+    <div class="input">
+        <select dir="rtl" name="mileagesSelect" id="mileagesSelect" ng-class="{'gray' : isGray == 'true'}" ng-model="modelName.mileage" ng-options="mileage as mileage.mileage for mileage in mileages track by mileage.mileage" required>
+            <option value="" selected></option>
+        </select>
+        <span class="dotted"></span>
+        <small class="input-error" ng-class="{'active' : formName.mileagesSelect.$dirty && formName.mileagesSelect.$invalid}" translate="FIELD_REQUIRED"></small>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="sweepStakeAdd" ng-click="sweepStakePop_up()">
+            <img src="img/a1.png">
+        </div>
+        <div class="container myService">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="OFFERS"></div>
+                    <div class="subtitle" translate="CURRENT_LOCATIONS"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h3><span translate='CURRENT'></span> <span class='highlight' translate='OFFERS'></span></h3>
+            <div class="infoBlock cursor" goto-url="/offers/display-sponsors">
+                <img class="mw100" src="img/logo_adamspicks.png" alt="Adam's Picks" />
+            </div>
+            <div class="infoBlock" ng-repeat="offer in offers">
+                <div class="cursor" goto-url="/offers/display-offer/{{offer.id}}">
+                    <label class="offer-title"><span ng-bind="offer.title"></span></label>
+                    <p ng-bind="offer.short_description"></p>
+                    <p class="tel"><span translate="EXPIRES"></span> <span ng-bind="offer.end_time | date:'MMMM d, y'"></span> </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="offers"></footer>

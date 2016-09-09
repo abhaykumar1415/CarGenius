@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget 
+  id="com.creativeproductions.cargenie" 
+  version="1.1.19" 
+  xmlns="http://www.w3.org/ns/widgets" 
+  xmlns:gap="http://phonegap.com/ns/1.0" 
+  xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+  <name>Car Genius</name>
+  <description>
+      Car Care At Your Command
+  </description>
+  <author email="info@creativeproductions.com" href="http://creativeproductions.com/">
+      Creative Productions
+  </author>
+
+  <access origin="*"/>
+
+  <content src="index.html"/>
+
+   <preference name="phonegap-version" value="cli-6.3.0" />
+
+  <preference name="deployment-target" value="8.0"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="permissions" value="none"/>
+  <preference name="orientation" value="portrait"/>
+  <preference name="target-device" value="universal"/>
+  <preference name="fullscreen" value="false"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/>
+  <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+  <preference name="TopActivityIndicator" value="white"/>
+  <preference name="SuppressesIncrementalRendering" value="true"/>
+  <preference name="detect-data-types" value="true"/>
+  <preference name="exit-on-suspend" value="false"/>
+  <preference name="disable-cursor" value="false"/>
+  <preference name="android-installLocation" value="auto"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="android-build-tool" value="gradle"/>
+  <preference name="SplashScreenDelay" value="5000"/>
+  
+  <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.5.3">
+    <param name="SENDER_ID" value="205433243225"/>
+  </gap:plugin>
+
+  <gap:plugin name="cordova-plugin-splashscreen" version="2.1.0" source="npm" />
+  <gap:plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb"/>
+
+   <gap:plugin name="org.apache.cordova.file" version="1.3.1" /> 
+   <gap:plugin name="org.apache.cordova.network-information" version="0.2.12"/> 
+  
+  <gap:plugin name="org.apache.cordova.console" version="0.2.11"/>
+  
+   <gap:plugin name="org.apache.cordova.device" version="0.2.12"/> 
+
+  <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+  <gap:plugin name="cordova-plugin-camera" source="npm"/>
+  <gap:plugin name="cordova-plugin-admobpro" source="npm"/>
+
+  <!-- <gap:plugin name="com.stevenpartridge.inappbrowser" spec="1.4" source="pgb"/> -->
+ <gap:plugin name="com.brodysoft.sqliteplugin" spec="1.0.6" source="pgb"/>
+
+  <!-- <gap:plugin name="nl.x-services.plugins.calendar.berserk" spec="3.2" source="pgb"/> -->
+
+  <feature name="UniversalAnalytics">
+    <param name="ios-package" value="UniversalAnalyticsPlugin"/>
+  </feature>
+  <feature name="UniversalAnalytics">
+    <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin"/>
+  </feature>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <feature name="Calendar">
+    <param name="android-package" gap:platform="android" value="nl.xservices.plugins.Calendar"/>
+  </feature>
+  <feature name="Calendar">
+    <param name="ios-package" gap:platform="ios" value="Calendar"/>
+  </feature>
+
+  
+    <icon src="resources/ios/icon/icon.png" width="57" height="57" gap:platform="ios" />
+    <icon src="resources/ios/icon/icon@2x.png" width="114" height="114" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-40.png" width="40" height="40" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-40@2x.png" width="80" height="80" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-50.png" width="50" height="50" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-50@2x.png" width="100" height="100" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-60.png" width="60" height="60" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-60@2x.png" width="120" height="120" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-60@3x.png" width="180" height="180" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-72.png" width="72" height="72" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-76.png" width="76" height="76" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-small.png" width="29" height="29" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58" gap:platform="ios"/>
+    <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-568h@2x~iphone.png" height="1136" width="640" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-667h.png" height="1334" width="750" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-736h.png" height="2208" width="1242" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-Landscape-736h.png" height="1242" width="2208" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-Landscape@2x~ipad.png" height="1536" width="2048" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-Landscape~ipad.png" height="768" width="1024" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-Portrait@2x~ipad.png" height="2048" width="1536" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default-Portrait~ipad.png" height="1024" width="768" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default@2x~iphone.png" height="960" width="640" gap:platform="ios"/>
+    <splash src="resources/ios/splash/Default~iphone.png" height="480" width="320" gap:platform="ios"/>
+
+    <preference name="android-minSdkVersion" value="15" gap:platform="android" />
+    <preference name="android-targetSdkVersion" value="23" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" density="xhdpi" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi" gap:platform="android"/>
+    <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-ldpi-screen.png" qualifier="land-ldpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-mdpi-screen.png" qualifier="land-mdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-hdpi-screen.png" qualifier="land-hdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-xhdpi-screen.png" qualifier="land-xhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-xxhdpi-screen.png" qualifier="land-xxhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-land-xxxhdpi-screen.png" qualifier="land-xxxhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-ldpi-screen.png" qualifier="port-ldpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-mdpi-screen.png" qualifier="port-mdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-hdpi-screen.png" qualifier="port-hdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" qualifier="port-xhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" qualifier="port-xxhdpi" gap:platform="android"/>
+    <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" qualifier="port-xxxhdpi" gap:platform="android"/>
+  <splash src="splash.png"/>
+</widget>

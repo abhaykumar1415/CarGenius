@@ -1,0 +1,68 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/users"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container userAuthentication">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <img class="logoText" src="img/logo_text.svg" />
+                    <div class="subtitle" translate="SMART"></div>
+                    <div class="title" translate="CAR_CARE"></div>                    
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h3><span translate='REGISTRATION'></span></h3>
+            <form action="" name="regUserForm" id="registerForm" novalidate >
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="text" letters-only placeholder="> {{'FIRSTNAME' | translate}}" capitalize-first ng-model="user.firstname" required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getSrvForm.make.$dirty && getSrvForm.make.$invalid}" translate="VALIDATION_ONLY_LETTERS" ></small> 
+                </div>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="text" letters-only placeholder="> {{'LASTNAME' | translate}}" capitalize-first ng-model="user.lastname" required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getSrvForm.make.$dirty && getSrvForm.make.$invalid}" translate="VALIDATION_ONLY_LETTERS" ></small> 
+                </div>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="email" placeholder="> {{'EMAIL' | translate}}" ng-model="user.email" required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getSrvForm.make.$dirty && getSrvForm.make.$invalid}"></small> 
+                </div>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="password" placeholder="> {{'REGISTRATION_PASSWORD' | translate}}" ng-model="user.password" required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getSrvForm.make.$dirty && getSrvForm.make.$invalid}"></small> 
+                </div>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="password" placeholder="> {{'CONFIRM_PASSWORD' | translate}}"  ng-model="user.confirmpassword" required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getSrvForm.make.$dirty && getSrvForm.make.$invalid}"></small> 
+                </div>
+                <label><input type="checkbox" ng-model="user.terms" required></label> I have read and agree to the <a href="#" ng-click="goToPrivacyLink()" class="url">Terms and Conditions</a><br>
+                <p>
+                    <button ng-disabled="regUserForm.$invalid" 
+                            ng-click="register(user,$event)" 
+                            class="button button-full button-assertive " 
+                            translate="REGISTER_NOW">
+                    </button>
+                </p>                
+            </form>
+			<div class="mt3r">
+				<small>&nbsp{{'ALREADY_LOGIN' | translate}}<a href="#" goto-url="/users/login" translate="SIGNIN"></a></small>
+			</div>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

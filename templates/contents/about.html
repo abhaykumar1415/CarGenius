@@ -1,0 +1,24 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/users/login"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container contentPage">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="subtitle" translate="SMART"></div>
+                    <div class="title" translate="CAR_CARE"></div>
+                </div>
+				<h1><span ng-bind="aboutInfo.title"></span></h1>
+				<div class="mb5r">
+					<p>
+						<span ng-bind-html="aboutInfo.body"></span>
+					</p>
+				</div>
+                <div class="clearfix"></div>
+            </div>
+		</div>
+    </ion-content>
+</ion-view>
+<banners></banners>

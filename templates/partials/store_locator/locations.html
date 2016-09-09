@@ -1,0 +1,8 @@
+<p class="pl15 locations-found"><span translate="WE_FOUND"></span> <span ng-bind="locationsFound"></span> <span translate="STORES_NEAR_YOUR_CURRENT_LOCATION"></span>:</p>
+<div class="infoBlock default" ng-repeat="location in locations" ng-class="{'default' : $first}">
+    <a class="no-decoration location-name" href="#/store-locator/display-service/{{location.id}}">
+        <label ng-bind="location.title">#<span ng-bind="location.id"></span></label>
+        <p class="address" ng-bind="location.address"><br><span ng-bind="location.city"></span>, <span ng-bind="location.state"></span> <span ng-bind="location.zipcode"></span></p>
+    </a>
+    <a class="no-decoration" href="tel:{{location.phone}}"><p class="tel"><i class="icon ion-ios-telephone"></i><span ng-bind="location.phone"></span></p></a>
+</div>

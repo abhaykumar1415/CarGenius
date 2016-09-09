@@ -1,0 +1,45 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container userAuthentication">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <img class="logoText" src="img/logo_text.svg" />
+                    <div class="subtitle" translate="SMART"></div>
+                    <div class="title" translate="CAR_CARE"></div>                    
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h3><span translate='LOG IN'></span></h3>
+            <form action="" name="getUserForm" novalidate>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="email" placeholder="> {{'EMAIL' | translate}}"   ng-model="user.email"  required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getUserForm.email.$dirty && getUserForm.email.$invalid}"></small> 
+                </div>
+                <div class="inputBlock">
+                    <div class="input">
+                        <input type="password" placeholder="> {{'PASSWORD' | translate}}"  ng-model="user.password"  required />
+                        <span class="dotted"></span>
+                    </div>
+                    <small class="input-error" ng-class="{'active' : getUserForm.password.$dirty && getUserForm.password.$invalid}"></small> 
+                </div>
+                <p class="login">
+                    <button ng-disabled="getUserForm.$invalid" ng-click="login(user, $event)" class="button button-full button-assertive" translate="LOGIN"></button>
+                </p>
+                <span class="infoRegister">{{'REGISTER' | translate}}</span>                
+                <p class="register">
+                    <button goto-url="/users/registration" class="button button-full button-assertive " translate="REGISTER_NOW"></button>
+                </p>     
+
+                <small class="pb11r">{{'FORGOT_PASS' | translate}} <a href="" goto-url="/users/forgot-password">{{'RECOVER_PASS' | translate}}</a></small>
+            </form> 
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

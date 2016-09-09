@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- angular/datetimepicker css -->
+    <link href="lib/angular-datetimepicker/css/datetimepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- load jquery library -->
+    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- ionic/angularjs js iOS9 patch -->
+    <script src="lib/angular-iOS9-patch/angular-ios9-uiwebview.patch.js"></script>
+
+    <!-- angular/ngstorage js -->
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+
+    <!-- ionic/translate js -->
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+
+    <!-- angular/moment js -->
+    <script src="lib/moment/moment.min.js"></script>
+
+    <!-- angular/datetimepicker js -->
+    <script src="lib/angular-datetimepicker/js/datetimepicker.js"></script>
+
+    <!-- angular/jwt js -->
+    <script src="lib/angular-jwt/angular-jwt.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!--<script src="//google-analytics.com/ga.js"></script>-->
+    <!--<script src="lib/GALocalStorage.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/translations/en.js"></script>
+    <!-- directives -->
+    <script src="js/directives/carsDirectives.js"></script>
+    <script src="js/directives/generalDirectives.js"></script>
+    <script src="js/directives/storelocatorDirectives.js"></script>
+    <!-- services -->
+    <script src="js/services/utilsService.js"></script>
+    <script src="js/services/popupService.js"></script>
+    <script src="js/services/carsService.js"></script>
+    <script src="js/services/usersService.js"></script>
+    <script src="js/services/myServiceService.js"></script>
+    <script src="js/services/myScheduleService.js"></script>
+    <script src="js/services/storelocatorService.js"></script>
+    <script src="js/services/offersService.js"></script>
+    <script src="js/services/contentService.js"></script>
+    <script src="js/services/adService.js"></script>
+    <!-- controllers -->
+    <script src="js/controllers/myServiceController.js"></script>
+    <script src="js/controllers/myScheduleController.js"></script>
+    <script src="js/controllers/storelocatorController.js"></script>
+    <script src="js/controllers/usersController.js"></script>
+    <script src="js/controllers/offersController.js"></script>
+    <script src="js/controllers/contentsController.js"></script>
+    <!-- external libs -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ionic-service-push/ionic-push.js"></script>
+    <script src="lib/angular-ui-mask/mask.min.js"></script>
+    <!-- generator MD5 hash -->
+    <script src="lib/angular-md5/angular-md5.js"></script>
+</head>
+
+<body ng-app="CarGenie">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable"></ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <div class="sweepStakePopMainPageOuter">
+        <div class="sweepStakePopMainPageInner">
+            <img src="img/a2.png" class="enterNowSweep">
+            <h4>Hurry! Enter your chance to win!</h4>
+            <div class="sweepInput">
+                > First Name<span>*</span>
+                <input type="text">
+            </div>
+            <div class="sweepInput">
+                > Last Name<span>*</span>
+                <input type="text">
+            </div>
+            <div class="sweepInput">
+                > Email<span>*</span>
+                <input type="text" id="emailInput">
+            </div>
+            <div class="sweepInput">
+                > Confirm Email<span>*</span>
+                <input type="text" id="confirmEmailInput">
+            </div> 
+            <ion-checkbox style="margin-left:10px;color:red;font-size: 10px;">* I am 21 years of age or older</ion-checkbox>
+            <ion-checkbox style="margin-left:10px;color:red;font-size: 10px;margin-top:-10px;">Create my <b>FREE</b> Car Genius account and get five (5) bonus entries!</ion-checkbox>
+
+            <div class="enterNow">Enter Now</div>
+            <p>
+                ABBREVIATED RULES. NO PURCHASE NECESSARY. Begins on 9/6/18 at 12:00:00 AM (ET) and ends on 10/31/16 at 11:59:59 PM (ET). Open only to legal U.S./D.C. residents (except RI) who are 21 years of age or older. See Official rules at INSERT URL for additional eligibility restrictions, prize description/restrictions/ARVs and complete details. Odds of winning depend on the number of eligible entries recieved. Void in RS and where prohibited. Sponser:Adam Carolla's Car Genius. 
+            </p>
+            <div class="underLinedText">Sweepstakes Official Rules & Regulations</div>
+            <div class="underLinedText">Car Genius Terms & Conditions</div>
+
+            <div class="asterix">* Indicates Required Fileds</div>
+        </div>
+    </div>
+
+    <div class="sweepStakePopThankPageOuter">
+        <div class="sweepStakePopMainPageInner">
+            <img src="img/a3.png" class="enterNowSweep">
+            <h4>Thank you for entering Adam Carolla's Car Genius Sweepstakes!</h4>
+            <p>
+                Come back tomorrow for another chance to win!
+            </p>
+            <div class="OkNow">OK</div>
+        </div>
+    </div>
+</body>
+
+</html>

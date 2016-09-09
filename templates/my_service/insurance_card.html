@@ -1,0 +1,26 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+	<ion-nav-buttons side="left">
+		<a class="button icon icon-left ion-chevron-left button-clear" href="#/my-service"></a>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="container myService">
+			<div class="contentHeader">
+				<div class="titleBlock">
+					<div class="title" translate="MY_SERVICE"></div>                    
+					<div class="subtitle" translate="INSURANCE_CARD"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="align-center" >
+				<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" width="260">
+				<!--<img ng-show="imgURI === undefined" ng-src="/img/img-plchold.png">-->
+				<img ng-show="imgURI === undefined" on-error="" ng-src="{{serverURI}}/insurance_card_images/insurance_card_vehicle_{{mCarInfo.id}}.jpg?{{currentTime}}" width="260" class="pt3r">
+			</div>
+			<p>
+				<button class="button button-full button-assertive mt1r mb5r" ng-click="sendPicture();" ng-if="imgURI !== undefined" translate="SAVE"></button>
+				<button class="button button-full button-assertive mt1r mb5r" ng-click="takePicture(true);" ng-if="imgURI === undefined" translate="TAKE_NEW_PICTURE"></button>
+			</p>
+		</div>
+	</ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

@@ -1,0 +1,14 @@
+<div class="infoBlock" ng-repeat="hoursOperation in hoursOperationInfo.hours_operation">
+    <h4><span translate="HOURS">HOURS</span> of {{"OF_OPERATION" | translate}}</h4>
+    <p class="hours">
+        <span class="day" ng-bind="hoursOperation.operate_on"></span>
+        <span class="time">
+            <span ng-bind="hoursOperation.operate_from  | date:'h:mm'"></span>
+            <span class="time_period" ng-bind="hoursOperation.operate_from  | date:'a'"></span> - 
+            <span ng-bind="hoursOperation.operate_to | date:'h:mm'"></span>
+            <span class="time_period" ng-bind="hoursOperation.operate_to | date:'a'"></span>
+        </span>
+        <span class="dotted"></span>
+        <span class="clearfix"></span>
+    </p>
+</div>

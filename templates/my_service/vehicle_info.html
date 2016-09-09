@@ -1,0 +1,30 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/my-service"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" ng-controller="MyServiceVehicleInfoCtrl">
+        <a class="button button-clear" translate="EDIT" href="#/my-service/edit-vehicle/{{carInfo.id}}" ></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container myService">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="MY_SERVICE"></div>
+                    <div class="subtitle" translate="MY_SERVICE_VEHICLE_INFORMATION"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div ng-repeat="key in unsorted(carInfo)" ng-init="value = carInfo[key]" ng-if="key != 'id'">
+                <div class="inputBlock default">
+                    <label translate="{{key | uppercase}}"></label>
+                    <div class="input">
+                        <span ng-bind="value"></span>
+                        <span class="dotted"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

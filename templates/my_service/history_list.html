@@ -1,0 +1,56 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/my-service/reminders-and-history/{{mCarInfo.id}}"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container myService">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="MY_SERVICE"></div>
+                    <div class="subtitle" translate="MY_SERVICE_REMINDERS_AND_HISTORY"></div>
+                </div>
+                <div class="clearfix"></div>
+                <h3>
+                    <div class="text">
+                        <span translate='MY'></span>
+                        <span translate="HISTORY" class='highlight'></span>
+                    </div>
+                    <span class="more"><a href="#/my-service/add-edit-history/{{mCarInfo.id}}">+</a></span>
+                    <span class="dotted"></span>
+                    <span class="clearfix"></span>
+                </h3>
+                
+                <div class="infoBlock" ng-repeat="reminderHisotry in remindersHistory">
+					<div class="cursor" goto-url="/my-service/add-edit-history/{{mCarInfo.id}}/{{reminderHisotry.id}}">
+						<h4 class="reminder-title"><span ng-bind="reminderHisotry.title"></span> >
+						<span ng-if="reminderHisotry.completed" class="ion-checkmark fr-green"></span>
+						</h4>
+						<p class="list">
+							<span class="left">
+								<span translate="MILEAGE"></span>
+							</span>
+							<span class="right">
+								<span ng-bind="reminderHisotry.mileage" ></span> <span translate="MILES"></span>
+							</span>
+							<span class="dotted"></span>
+							<span class="clearfix"></span>
+						</p>
+						<p class="list">
+							<span class="left">
+								<span translate="DATE"></span>
+							</span>
+							<span class="right">
+								<span ng-bind="reminderHisotry.date_of_event | date:'MMMM d, y h:mm a'"></span>
+							</span>
+							<span class="dotted"></span>
+							<span class="clearfix"></span>
+						</p>
+						<div class="mb20"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

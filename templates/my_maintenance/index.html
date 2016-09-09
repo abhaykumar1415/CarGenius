@@ -1,0 +1,26 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left" ng-controller="MyScheduleCtrl">
+        <a class="button icon icon-left ion-chevron-left button-clear" ng-if="mCarInfo.id" href="#/my-service/edit-vehicle/{{mCarInfo.id}}"></a>
+        <a class="button icon icon-left ion-chevron-left button-clear" ng-if="!mCarInfo.id " href="#/"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container myMaintenance">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="MY_MAINTENANCE"></div>
+                    <div class="subtitle" translate="SCHEDULE"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <form action="" name="getSrvForm" ng-controller="MyScheduleCtrl">
+                <cars-selects form-name="getSrvForm" model-name="mCarInfo" makes="makes" years="years" models="models" mileages="mileages" is-gray="true">
+                </cars-selects>
+                <p>
+                    <button ng-disabled="getSrvForm.$invalid" ng-click="getServicesList(mCarInfo, $event)" class="button button-full button-assertive" translate="GET_SCHEDULE"></button>
+                </p>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="mymaintenance"></footer>

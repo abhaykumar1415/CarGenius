@@ -1,0 +1,36 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header" scroll="false">
+        <div class="container storeLocator">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="STORE_LOCATOR"></div>
+                    <div class="subtitle" translate="Search"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <form name="search-locations-form">
+                <h3><span translate='SEARCH_BY'></span> <span translate="ZIP_CODE_TITLE" class="highlight"></span></h3>
+                <div class="inputBlock">
+                    <label translate="ZIP_CODE"></label>
+                    <div class="input">
+                        <input type="text" value="" name="zip_code" ng-model="locationSearch.zipcode" />
+                        <span class="dotted"></span>
+                    </div>
+                </div>
+                <div class="inputBlock">
+                    <label translate="MILES"></label>
+                    <div class="input">
+                        <input type="text" value="" name="distance" ng-model="locationSearch.distance"/>
+                        <span class="dotted"></span>
+                    </div>
+                </div>
+                <button ng-click="searchLocations(locationSearch, $event)" class="button button-assertive" type="submit" translate="LOCATE_SERVICE_CENTER"></button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="storelocator"></footer>

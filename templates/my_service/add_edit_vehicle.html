@@ -1,0 +1,76 @@
+<ion-view title="{{'APP_NAME' | translate}}" resize>
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#/my-service"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+        <a class="button button-clear" id="addUpdateSaveButton" ng-click="saveCar(mCarInfo, $event);" ng-disabled="fw.addUpdateCarForm.$invalid"  translate="SAVE" hef="#/"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header myServiceContent" scroll="false">
+        <div class="container myService" >
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="MY_SERVICE"></div>
+                    <div class="subtitle" ng-if="isEdit" translate="EDIT_VEHICLE"></div>
+                    <div class="subtitle" ng-if="!isEdit" translate="ADD_VEHICLE"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+				<form action="" ng-class="{'formScroll' : true}" name="fw.addUpdateCarForm" style="max-height:{{windowHeight}}px;" >
+				<ion-scroll class="setPosition mt1r">
+					<cars-selects form-name="fw.addUpdateCarForm" model-name="mCarInfo" makes="makes" models="models" years="years" mileages="mileages" is-gray="false"></cars-selects>
+					<div class="inputBlock default">
+						<label translate="VIN"></label>
+						<div class="input">
+							<input type="text" name="vin" class="text-right" capitalize ng-model="mCarInfo.vin" />
+							<span class="dotted"></span>
+							<small class="input-error" ng-class="{'active' : fw.addUpdateCarForm.vin.$dirty && fw.addUpdateCarForm.vin.$invalid}"></small>
+						</div>
+					</div>
+					<div class="inputBlock default">
+						<label translate="COLOR"></label>
+						<div class="input">
+							<input type="text" name="color" class="text-right" capitalize-first ng-model="mCarInfo.color" />
+							<span class="dotted"></span>
+							<small class="input-error" ng-class="{'active' : fw.addUpdateCarForm.color.$dirty && fw.addUpdateCarForm.color.$invalid}"></small>
+						</div>
+					</div>
+					<div class="inputBlock default">
+						<label translate="INSURANCE_CARRIER"></label>
+						<div class="input">
+							<input type="text" name="insurance_carrier" class="text-right" ng-model="mCarInfo.insurance_name" />
+							<span class="dotted"></span>
+							<small class="input-error" ng-class="{'active' : fw.addUpdateCarForm.insurance_name.$dirty && fw.addUpdateCarForm.insurance_name.$invalid}"></small>
+						</div>
+					</div>
+					<div class="inputBlock default">
+						<label translate="INSURANCE_NUMBER"></label>
+						<div class="input">
+							<input type="number" name="insurance_number" string-to-number class="text-right" ng-model="mCarInfo.insurance_number" />
+							<span class="dotted"></span>
+							<small class="input-error" ng-class="{'active' : fw.addUpdateCarForm.insurance_number.$dirty && fw.addUpdateCarForm.insurance_number.$invalid}"></small>
+						</div>
+					</div>
+					<div class="inputBlock default">
+						<label translate="INSURANCE_PHONE"></label>
+						<div class="input">
+							<input type="text" name="insurance_phone" class="text-right" ng-model="mCarInfo.insurance_phone" ui-mask="999-999-9999" />
+							<span class="dotted"></span>
+							<small class="input-error" ng-class="{'active' : fw.addUpdateCarForm.insurance_phone.$dirty && fw.addUpdateCarForm.insurance_phone.$invalid}" ></small>
+						</div>
+					</div>
+					</ion-scroll>
+				</form>
+            <div ng-show="isEdit" class="serviceEditBlock">
+                <a class="button button-full button-assertive mt1r" href="#/my-service/reminders-and-history/{{mCarInfo.id}}" translate="VIEW_REMINDERS_AND_HISTORY"></a>
+                <a class="button button-full button-assertive mt1r" href="#/my-service/scan-insurance-card/{{mCarInfo.id}}" translate="VIEW_INSURANCE_CARD"></a>
+				<a class="button button-full button-assertive mt1r" href="#" ng-click="goToMaintenancePage(mCarInfo.id)" translate="MY_SERVICE_ADD_EDIT_MAINTENANCE_SCHEDULE"></a>
+                <a class="button-delete button-full" href="#" ng-click="deleteCar(mCarInfo.id)" title="Delete" translate="DELETE_VEHICLE"></a>
+            </div>
+			<div ng-show="!isEdit" class="serviceAddBlock">
+				<a class="button button-full button-assertive mt1r" ng-click="addAndTakePicture(mCarInfo, $event)" ng-disabled="fw.addUpdateCarForm.$invalid" translate="TAKE_INSURANCE_CARD_PHOTO"></a>
+			</div>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="myservice"></footer>

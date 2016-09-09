@@ -1,0 +1,28 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" href="#" ng-click="backTo('/store-locator/select-preferred-location/:zipcode/:distance')"></a>
+    </ion-nav-buttons>
+    <!-- Google map element -->
+    <ion-content class="has-header" >
+        <div class="container storeLocator service">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" ng-bind="mapInfo.title"></div>
+                    <div class="subtitle"><span translate="SERVICE_CENTER"></span> #<span ng-bind="mapInfo.id"></span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="serviceInfo">
+                <h4 ng-bind="mapInfo.address"></h4>
+                <p><span ng-bind="mapInfo.city"></span>, <span ng-bind="mapInfo.state"></span>. <span ng-bind="mapInfo.zipcode"></span></p>
+                <a class="no-decoration" href="tel:{{mapInfo.phone}}"><p class="tel"><i class="icon ion-ios-telephone"></i><span ng-bind="mapInfo.phone"></span></p></a>
+            </div>
+            <!--Hours of operation -->
+            <hours-operation></hours-operation>
+            <!--Google store locator map -->
+            <store-locator-map location-id="{{locations.locationId}}"></store-locator-map>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="storelocator"></footer>

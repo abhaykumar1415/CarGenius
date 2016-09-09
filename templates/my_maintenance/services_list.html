@@ -1,0 +1,28 @@
+<ion-view title="{{'APP_NAME' | translate}}">
+    <ion-nav-buttons side="left">
+        <a class="button icon icon-left ion-chevron-left button-clear" ng-if="mCarInfo.id" href="#/my-maintenance/car/{{mCarInfo.id}}"></a>
+        <a class="button icon icon-left ion-chevron-left button-clear" ng-if="!mCarInfo.id" href="#/my-maintenance"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="container myMaintenance">
+            <div class="contentHeader">
+                <app-logo></app-logo>
+                <div class="titleBlock">
+                    <div class="title" translate="MY_MAINTENANCE"></div>
+                    <div class="subtitle" translate="SCHEDULE"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <h3><span class="car-model-title" ng-bind="mCarInfo.make.title"></span>,<span class="highlight" ng-bind="mCarInfo.year.year_number"></span>, <span class="highlight" ng-bind="mCarInfo.model.title"></span> </h3>
+            <div class="inputBlock" ng-repeat="service in services" ng-class="{'default' : $first}">
+                <div class="input pt05r">
+                    <span class="fs175r" ng-bind="service.operation_type"></span>
+                    <span class="fs175r" ng-bind="service.component.name"></span>
+                    <span class="dotted"></span>
+                </div>
+            </div>
+            <a class="button button-full button-assertive" href="#/store-locator/select-zip" translate="SCHEDULE_APPOINTMENT"></a>
+        </div>
+    </ion-content>
+</ion-view>
+<footer active-item="mymaintenance"></footer>

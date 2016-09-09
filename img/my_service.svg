@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="156"
+   height="33"
+   id="svg8056"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 7">
+  <defs
+     id="defs8058" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="216.16946"
+     inkscape:cy="100.0959"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8061">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1019.3621)">
+    <g
+       transform="matrix(0.55184536,0,0,0.55184536,427.9694,1101.834)"
+       id="My_Service_Icon_-_ON_20_">
+      <path
+         d="m -650.841,-114.58 h -1.118 v -5.416 c 0,-2.008 -1.548,-3.93 -3.438,-4.27 l -22.535,-4.064 21.387,-12.699 -3.064,-5.159 -25.513,15.151 c -6.349,-4.59 -18.692,-13.217 -23.057,-14.186 -8.285,-1.834 -22.661,-2.082 -31.328,-0.244 -8.573,1.816 -23.018,17.176 -23.018,17.176 h 0.003 l -6.865,1.131 c -1.896,0.313 -3.447,2.213 -3.447,4.221 v 8.359 h -1.25 c -0.96,0 -1.593,0.807 -1.408,1.793 l 1.743,9.295 c 0.146,0.777 0.913,1.414 1.705,1.414 h 10.098 c 0.26,6.906 5.923,12.428 12.895,12.43 6.967,-0.002 12.632,-5.523 12.894,-12.43 h 52.73 c 0.261,6.908 5.924,12.428 12.894,12.43 6.969,-0.002 12.633,-5.521 12.895,-12.43 h 6.8 c 1.189,0 2.161,-0.971 2.161,-2.16 v -8.182 c -0.003,-1.187 -0.975,-2.16 -2.164,-2.16 z m -96.121,-20.059 c 0,0 6.133,-6.582 12.233,-7.242 0.415,-0.045 0.821,-0.078 1.232,-0.119 v 13.631 h -10.927 c -4.713,0 -5.854,-2.822 -2.538,-6.27 z m 18.465,6.27 v -14.041 c 5.906,-0.35 11.575,-0.199 17.369,0.767 4.741,0.79 15.295,8.608 21.619,13.274 h -38.988 z"
+         id="path2017"
+         inkscape:connector-curvature="0"
+         style="fill:#cc3333" />
+    </g>
+    <g
+       transform="matrix(0.54328675,0,0,0.54328675,1104.6169,3208.4766)"
+       id="My_Service_Icon_-_OFF">
+      <path
+         stroke-miterlimit="10"
+         d="m -1751.068,-3994.58 h -1.118 v -5.416 c 0,-2.009 -1.548,-3.931 -3.438,-4.271 l -22.536,-4.063 21.387,-12.7 -3.064,-5.159 -25.514,15.151 c -6.349,-4.59 -18.691,-13.217 -23.058,-14.185 -8.284,-1.835 -22.66,-2.082 -31.327,-0.245 -8.572,1.817 -23.018,17.177 -23.018,17.177 h 0 l -6.866,1.131 c -1.896,0.313 -3.446,2.212 -3.446,4.22 v 8.36 h -1.25 c -0.96,0 -1.594,0.807 -1.408,1.792 l 1.743,9.295 c 0.146,0.778 0.913,1.415 1.705,1.415 h 10.098 c 0.259,6.906 5.922,12.427 12.894,12.429 6.967,0 12.632,-5.523 12.894,-12.429 h 52.73 c 0.261,6.907 5.925,12.427 12.894,12.429 6.969,0 12.633,-5.522 12.895,-12.429 h 6.8 c 1.188,0 2.16,-0.972 2.16,-2.16 v -8.182 c 0,-1.187 -0.97,-2.16 -2.159,-2.16 z m -96.121,-20.058 c 0,0 6.134,-6.582 12.233,-7.242 0.415,-0.045 0.821,-0.079 1.232,-0.121 v 13.631 h -10.927 c -4.714,0 -5.854,-2.821 -2.538,-6.268 z m 18.465,6.268 v -14.04 c 5.906,-0.351 11.575,-0.2 17.369,0.766 4.741,0.79 15.295,8.609 21.619,13.274 h -38.988 z"
+         id="path4227"
+         inkscape:connector-curvature="0"
+         style="fill:#f0f0f0;stroke:#333333;stroke-width:2;stroke-miterlimit:10" />
+    </g>
+  </g>
+</svg>
